@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+<meta http-equiv="Cache-Control" content="no-transform " />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>node发送邮件</title>
+<link href="/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="content">
+      <form action="/join" method="post" id="subform" class="form">
+        <div class="radio-box">
+          <div style="margin-left:50%;" class="radio-active" id="man"></div><label style="margin-left: 6px">学长</label>
+        </div>
+        <div class="radio-box">
+          <div style="margin-left:20%;" class="radio" id="woman"></div><label style="margin-left: 6px">学姐</label>
+        </div>
+        <input type="hidden" name="sex" id="sex" value="男">
+        <div class="line">
+          <label for="name"><span class="red">*</span>姓名</label><input type="text" class="text" name="name" id="name">
+        </div>
+        <div class="line">
+          <label for="phone"><span class="red">*</span>电话</label><input type="text" class="text" name="phone" id="phone" >
+        </div>
+        <div class="line">
+          <label for="email"><span class="red">*</span>邮箱</label><input type="text" class="text" id="email" name="email">
+        </div>
+        <div class="line">
+          <label for="qq">&nbsp;QQ</label><input type="text" class="text" id="qq" name="qq">
+        </div>
+        <div class="line">
+          <label for="age">&nbsp;年龄</label><input type="text" class="text" id="age" name="age">
+        </div>
+        <div class="line">
+          <label for="address" class="wid-100">&nbsp;联系地址</label><textarea class="top-12 pad-l-5" id="address" name="address"></textarea>
+        </div>
+        <div class="line">
+          <label for="school" class="wid-100"><span class="red">*</span>所在院校及专业</label><input type="text" class="text wid-100 top-12 pad-l-5" id="school" name="school">
+        </div>
+        <div class="line">
+          <label for="schooladdress" class="wid-100"><span class="red">*</span>学校地址</label><textarea class="top-12 pad-l-5" id="schooladdress" name="schooladdress"></textarea>
+        </div>
+        <div class="line">
+          <label for="des" class="wid-100">&nbsp;跟我们说说你的大学吧</label><textarea id="des" name="des" class="pad-l-12 top-5"></textarea>
+        </div>
+        <div class="line">
+          <label for="book" class="wid-100">&nbsp;个人书单及评价</label><textarea id="book" name="book" class="pad-l-12 top-5"></textarea>
+        </div>
+        <div class="error top-5"></div>
+        <div class="sub" id="sub"></div>
+      </form>
+      <div class="bottom">
+        <img src="/img/paper_bottom.png" width="100%">
+      </div>
+      <div style="height:100px"></div>
+    </div>
+    <img src="/img/bt_pre.png" style="position:absolute;left:0;top:0;opacity:0">
+</body>
+<script src="/js/common/jquery.min.js"></script>
+<script src="/js/common/fastclick.js"></script>
+<script>
+
+  $("textarea").scroll(function(){ $(this).css("height",$(this)[0].scrollHeight); });
+
+
+  var list = $("textarea");
+  for(var i=0;i<list.length;i++){
+    $(list[i]).css("height",$(list[i])[0].scrollHeight);
+  }
+  FastClick.attach(document.body);
+</script>
+<script src="/js/app.js"></script>
+</body>
+</html>
+

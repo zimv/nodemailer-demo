@@ -1,0 +1,53 @@
+@one: 1080deg;
+@two: 1140deg;
+@three: 1200deg;
+@four: 1260deg;
+@five: 1320deg;
+@six: 1380deg;
+
+.rotate-1{
+    -webkit-transition: -webkit-transform 4s ease-out;
+    -webkit-transform: rotateZ(@one)!important;
+}
+.rotate-2{
+    -webkit-transition: -webkit-transform 4s ease-out;
+    -webkit-transform: rotateZ(@two)!important;
+}
+.rotate-3{
+    -webkit-transition: -webkit-transform 4s ease-out;
+    -webkit-transform: rotateZ(@three)!important;
+}
+.rotate-4{
+    -webkit-transition: -webkit-transform 4s ease-out;
+    -webkit-transform: rotateZ(@four)!important;
+}
+.rotate-5{
+    -webkit-transition: -webkit-transform 4s ease-out;
+    -webkit-transform: rotateZ(@five)!important;
+}
+.rotate-6{
+    -webkit-transition: -webkit-transform 4s ease-out;
+    -webkit-transform: rotateZ(@six)!important;
+}
+
+.bgchange{
+	-webkit-animation: changebg 1s steps(2) infinite;
+}
+
+
+
+@-webkit-keyframes changebg {
+    0% {
+        background-image: url(../img/background.jpg);
+    }
+    50% {
+        background-image: url(../img/background.jpg);
+    }
+    51% {
+        background-image: url(../img/background-2.jpg);
+    }
+    100% {
+        background-image: url(../img/background-2.jpg);
+    }
+}
+
